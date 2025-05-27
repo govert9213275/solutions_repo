@@ -1,0 +1,191 @@
+Problem 1: Investigating the Range as a Function of the Angle of Projection
+Theoretical Foundation
+Derivation of Governing Equations
+Projectile motion is governed by Newton’s second law, considering gravity as the primary force. We start with the differential equations for a projectile in a vacuum (no air resistance):
+
+Horizontal motion: No forces act horizontally (assuming no air resistance), so acceleration is zero:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{d^2x}{dt^2} = 0</annotation></semantics></math>
+Integrating twice:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi>v</mi><mrow><mi>x</mi><mn>0</mn></mrow></msub><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>cos</mi><mo>⁡</mo><mi>θ</mi><mo separator="true">,</mo><mspace width="1em"></mspace><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>cos</mi><mo>⁡</mo><mi>θ</mi><mo>⋅</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">\frac{dx}{dt} = v_{x0} = v_0 \cos\theta, \quad x(t) = v_0 \cos\theta \cdot t</annotation></semantics></math>
+where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">v_0</annotation></semantics></math> is the initial velocity, and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math> is the angle of projection.
+Vertical motion: Gravity acts downward with acceleration <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">-g</annotation></semantics></math>:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mo>−</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">\frac{d^2y}{dt^2} = -g</annotation></semantics></math>
+Integrating:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi>v</mi><mrow><mi>y</mi><mn>0</mn></mrow></msub><mo>−</mo><mi>g</mi><mi>t</mi><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>sin</mi><mo>⁡</mo><mi>θ</mi><mo>−</mo><mi>g</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\frac{dy}{dt} = v_{y0} - g t = v_0 \sin\theta - g t</annotation></semantics></math>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>sin</mi><mo>⁡</mo><mi>θ</mi><mo>⋅</mo><mi>t</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y(t) = v_0 \sin\theta \cdot t - \frac{1}{2} g t^2</annotation></semantics></math>
+assuming initial height <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y_0 = 0</annotation></semantics></math>.
+
+Range Calculation
+The range <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math> is the horizontal distance when <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y(t) = 0</annotation></semantics></math>. Solve:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>sin</mi><mo>⁡</mo><mi>θ</mi><mo>⋅</mo><mi>t</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y(t) = v_0 \sin\theta \cdot t - \frac{1}{2} g t^2 = 0</annotation></semantics></math>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>t</mi><mo stretchy="false">(</mo><msub><mi>v</mi><mn>0</mn></msub><mi>sin</mi><mo>⁡</mo><mi>θ</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>g</mi><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t (v_0 \sin\theta - \frac{1}{2} g t) = 0</annotation></semantics></math>
+Non-zero solution:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mn>2</mn><msub><mi>v</mi><mn>0</mn></msub><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow><mi>g</mi></mfrac></mrow><annotation encoding="application/x-tex">t = \frac{2 v_0 \sin\theta}{g}</annotation></semantics></math>
+Substitute into <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x(t)</annotation></semantics></math>:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>R</mi><mo>=</mo><mi>x</mi><mrow><mo fence="true">(</mo><mfrac><mrow><mn>2</mn><msub><mi>v</mi><mn>0</mn></msub><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow><mi>g</mi></mfrac><mo fence="true">)</mo></mrow><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>cos</mi><mo>⁡</mo><mi>θ</mi><mo>⋅</mo><mfrac><mrow><mn>2</mn><msub><mi>v</mi><mn>0</mn></msub><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow><mi>g</mi></mfrac><mo>=</mo><mfrac><mrow><msubsup><mi>v</mi><mn>0</mn><mn>2</mn></msubsup><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>2</mn><mi>θ</mi><mo stretchy="false">)</mo></mrow><mi>g</mi></mfrac></mrow><annotation encoding="application/x-tex">R = x\left(\frac{2 v_0 \sin\theta}{g}\right) = v_0 \cos\theta \cdot \frac{2 v_0 \sin\theta}{g} = \frac{v_0^2 \sin(2\theta)}{g}</annotation></semantics></math>
+The range depends on <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>2</mn><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\sin(2\theta)</annotation></semantics></math>, peaking at <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>4</mn><msup><mn>5</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\theta = 45^\circ</annotation></semantics></math> where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>2</mn><mi>θ</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sin(2\theta) = 1</annotation></semantics></math>.
+Family of Solutions
+The equations form a family of solutions parameterized by:
+
+Initial velocity (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">v_0</annotation></semantics></math>): Range scales with <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>v</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">v_0^2</annotation></semantics></math>.
+Angle (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math>): Affects both horizontal and vertical components.
+Gravitational acceleration (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math>): Inversely proportional to range.
+Initial height (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">y_0</annotation></semantics></math>): Modifies time of flight and range if non-zero.
+
+Analysis of the Range
+The range equation <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mfrac><mrow><msubsup><mi>v</mi><mn>0</mn><mn>2</mn></msubsup><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>2</mn><mi>θ</mi><mo stretchy="false">)</mo></mrow><mi>g</mi></mfrac></mrow><annotation encoding="application/x-tex">R = \frac{v_0^2 \sin(2\theta)}{g}</annotation></semantics></math> shows:
+
+Angle dependence: Maximum range at <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>4</mn><msup><mn>5</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\theta = 45^\circ</annotation></semantics></math>. Complementary angles (e.g., 30° and 60°) yield identical ranges due to <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>2</mn><mi>θ</mi><mo stretchy="false">)</mo><mo>=</mo><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>18</mn><msup><mn>0</mn><mo>∘</mo></msup><mo>−</mo><mn>2</mn><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\sin(2\theta) = \sin(180^\circ - 2\theta)</annotation></semantics></math>.
+Velocity dependence: Range increases quadratically with <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">v_0</annotation></semantics></math>.
+Gravity dependence: Range is inversely proportional to <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math>, relevant for extraterrestrial applications (e.g., Moon’s <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>≈</mo><mn>1.625</mn><mtext> </mtext><msup><mtext>m/s</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">g \approx 1.625 \, \text{m/s}^2</annotation></semantics></math>).
+
+Practical Applications
+
+Sports: Optimizing throw angles in javelin or shot put.
+Engineering: Artillery or rocket trajectory design.
+Astrophysics: Modeling low-orbit trajectories with adjusted <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math>.
+Uneven terrain: Adjust <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">y_0</annotation></semantics></math> or solve for landing height <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">y(t) = h</annotation></semantics></math>.
+Air resistance: Introduces drag force, requiring numerical solutions (see below).
+
+Implementation
+Projectile Motion Without Air Resistance
+We simulate trajectories for <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mn>0</mn></msub><mo>=</mo><mn>50</mn><mtext> </mtext><mtext>m/s</mtext></mrow><annotation encoding="application/x-tex">v_0 = 50 \, \text{m/s}</annotation></semantics></math>, angles <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mn>1</mn><msup><mn>5</mn><mo>∘</mo></msup><mo separator="true">,</mo><mn>4</mn><msup><mn>5</mn><mo>∘</mo></msup><mo separator="true">,</mo><mn>7</mn><msup><mn>5</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\theta = 15^\circ, 45^\circ, 75^\circ</annotation></semantics></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>9.81</mn><mtext> </mtext><msup><mtext>m/s</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">g = 9.81 \, \text{m/s}^2</annotation></semantics></math>.
+pythonCopyimport numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters
+v0 = 50  # initial velocity (m/s)
+angles = [15, 45, 75]  # degrees
+g = 9.81  # gravity (m/s^2)
+
+plt.figure(figsize=(10, 6))
+
+for theta_deg in angles:
+    theta = np.radians(theta_deg)
+    # Time of flight
+    t_flight = 2 * v0 * np.sin(theta) / g
+    t = np.linspace(0, t_flight, 100)
+    # Trajectory
+    x = v0 * np.cos(theta) * t
+    y = v0 * np.sin(theta) * t - 0.5 * g * t**2
+    plt.plot(x, y, label=f'θ = {theta_deg}°')
+
+plt.title('Projectile Motion Trajectories (v0 = 50 m/s)')
+plt.xlabel('Range (m)')
+plt.ylabel('Height (m)')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+Projectile Motion With Air Resistance
+Air resistance introduces a drag force proportional to velocity (linear drag) or velocity squared (quadratic drag). We use linear drag: <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>d</mi></msub><mo>=</mo><mo>−</mo><mi>b</mi><mi mathvariant="bold">v</mi></mrow><annotation encoding="application/x-tex">F_d = -b \mathbf{v}</annotation></semantics></math>. The equations become:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>m</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mo>−</mo><mi>b</mi><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo separator="true">,</mo><mspace width="1em"></mspace><mi>m</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mo>−</mo><mi>m</mi><mi>g</mi><mo>−</mo><mi>b</mi><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">m \frac{d^2x}{dt^2} = -b \frac{dx}{dt}, \quad m \frac{d^2y}{dt^2} = -mg - b \frac{dy}{dt}</annotation></semantics></math>
+Dividing by mass <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math>:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mo>−</mo><mfrac><mi>b</mi><mi>m</mi></mfrac><msub><mi>v</mi><mi>x</mi></msub><mo separator="true">,</mo><mspace width="1em"></mspace><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mo>−</mo><mi>g</mi><mo>−</mo><mfrac><mi>b</mi><mi>m</mi></mfrac><msub><mi>v</mi><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">\frac{d^2x}{dt^2} = -\frac{b}{m} v_x, \quad \frac{d^2y}{dt^2} = -g - \frac{b}{m} v_y</annotation></semantics></math>
+These are solved numerically using the Euler method or libraries like scipy.integrate.
+pythonCopyfrom scipy.integrate import odeint
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters
+v0 = 50  # m/s
+theta = np.radians(45)  # 45 degrees
+g = 9.81  # m/s^2
+b = 0.1  # drag coefficient
+m = 1  # mass (kg)
+
+# Differential equations
+def projectile(state, t, b, m, g):
+    x, vx, y, vy = state
+    dxdt = vx
+    dvxdt = -b/m * vx
+    dydt = vy
+    dvydt = -g - b/m * vy
+    return [dxdt, dvxdt, dydt, dvydt]
+
+# Time array
+t = np.linspace(0, 10, 500)
+
+# Initial conditions
+v0x = v0 * np.cos(theta)
+v0y = v0 * np.sin(theta)
+state0 = [0, v0x, 0, v0y]
+
+# Solve with air resistance
+sol_air = odeint(projectile, state0, t, args=(b, m, g))
+x_air, y_air = sol_air[:, 0], sol_air[:, 2]
+
+# Solve without air resistance
+t_flight = 2 * v0 * np.sin(theta) / g
+t_no_air = np.linspace(0, t_flight, 500)
+x_no_air = v0 * np.cos(theta) * t_no_air
+y_no_air = v0 * np.sin(theta) * t_no_air - 0.5 * g * t_no_air**2
+
+# Plot
+plt.figure(figsize=(10, 6))
+plt.plot(x_air, y_air, label='With air resistance (b = 0.1)')
+plt.plot(x_no_air, y_no_air, label='No air resistance')
+plt.title('Projectile Motion: With vs Without Air Resistance (v0 = 50 m/s, θ = 45°)')
+plt.xlabel('Range (m)')
+plt.ylabel('Height (m)')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+Plot for Different Angles (15°, 45°, 75° at 50 m/s)
+pythonCopyimport numpy as np
+import matplotlib.pyplot as plt
+
+v0 = 50
+angles = [15, 45, 75]
+g = 9.81
+
+plt.figure(figsize=(10, 6))
+for theta_deg in angles:
+    theta = np.radians(theta_deg)
+    t_flight = 2 * v0 * np.sin(theta) / g
+    t = np.linspace(0, t_flight, 100)
+    x = v0 * np.cos(theta) * t
+    y = v0 * np.sin(theta) * t - 0.5 * g * t**2
+    plt.plot(x, y, label=f'θ = {theta_deg}°')
+
+plt.title('Projectile Motion for Different Angles (v0 = 50 m/s)')
+plt.xlabel('Range (m)')
+plt.ylabel('Height (m)')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+Plot for Different Velocities (30, 40, 50 m/s at 45°)
+pythonCopyimport numpy as np
+import matplotlib.pyplot as plt
+
+v0s = [30, 40, 50]
+theta = np.radians(45)
+g = 9.81
+
+plt.figure(figsize=(10, 6))
+for v0 in v0s:
+    t_flight = 2 * v0 * np.sin(theta) / g
+    t = np.linspace(0, t_flight, 100)
+    x = v0 * np.cos(theta) * t
+    y = v0 * np.sin(theta) * t - 0.5 * g * t**2
+    plt.plot(x, y, label=f'v0 = {v0} m/s')
+
+plt.title('Projectile Motion for Different Velocities (θ = 45°)')
+plt.xlabel('Range (m)')
+plt.ylabel('Height (m)')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+Range vs Angle Plot
+To visualize range as a function of angle, we compute <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mfrac><mrow><msubsup><mi>v</mi><mn>0</mn><mn>2</mn></msubsup><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>2</mn><mi>θ</mi><mo stretchy="false">)</mo></mrow><mi>g</mi></mfrac></mrow><annotation encoding="application/x-tex">R = \frac{v_0^2 \sin(2\theta)}{g}</annotation></semantics></math> for <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>∈</mo><mo stretchy="false">[</mo><msup><mn>0</mn><mo>∘</mo></msup><mo separator="true">,</mo><mn>9</mn><msup><mn>0</mn><mo>∘</mo></msup><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">\theta \in [0^\circ, 90^\circ]</annotation></semantics></math>.
+Grok can make mistakes. Always check original sources.Download
+Limitations and Extensions
+
+Idealized model: Assumes no air resistance, flat terrain, and constant gravity.
+Air resistance: Reduces range and height, requiring numerical methods for accuracy.
+Uneven terrain: Modify landing condition to <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">y(t) = h</annotation></semantics></math>, solved numerically or analytically with adjusted time of flight.
+Wind: Introduce additional force terms in the differential equations.
+Variable gravity: For high-altitude projectiles, account for <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>G</mi><mi>M</mi></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">g(r) = \frac{GM}{r^2}</annotation></semantics></math>.
