@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 2 - Physics and Mathematics</title>
+<title>Problem - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 2";
+        var mkdocs_page_name = "Problem";
         var mkdocs_page_input_path = "1 Physics/1 Mechanics/Problem_2.md";
         var mkdocs_page_url = null;
       </script>
@@ -48,7 +48,7 @@
 <ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Problem_1/">1. Theoretical Foundation</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem</a>
 <ul class="current">
 </ul>
 </li>
@@ -163,7 +163,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">1 Mechanics</li>
-<li class="breadcrumb-item active">Problem 2</li>
+<li class="breadcrumb-item active">Problem</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +171,239 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
+<h1 id="problem">Problem</h1>
+<p>Typically of the form:
+𝑑
+2
+𝜃
+𝑑
+𝑡
+2
++
+𝛽
+𝑑
+𝜃
+𝑑
+𝑡
++
+𝜔
+0
+2
+sin
+⁡
+(
+𝜃
+)
+=
+Γ
+cos
+⁡
+(
+𝜔
+𝑡
+)
+dt 
+2</p>
+<p>d 
+2
+ θ
+​
+ +β 
+dt
+dθ
+​
+ +ω 
+0
+2
+​
+ sin(θ)=Γcos(ωt)</p>
+<p>Linearize the equation using the small-angle approximation:</p>
+<p>Replace 
+sin
+⁡
+(
+𝜃
+)
+≈
+𝜃
+sin(θ)≈θ and simplify the equation.</p>
+<p>Derive or discuss analytical solutions for the linearized system.</p>
+<p>Identify and analyze resonance conditions:</p>
+<p>Determine the frequency at which maximum amplitude occurs.</p>
+<p>Discuss how energy is transferred and dissipated in the system:</p>
+<p>Role of damping and driving force.</p>
+<p>✅ 2. Analysis of Dynamics
+Investigate how each parameter affects the system:</p>
+<p>Damping coefficient 
+𝛽
+β</p>
+<p>Driving amplitude 
+Γ
+Γ</p>
+<p>Driving frequency 
+𝜔
+ω</p>
+<p>Characterize different dynamical behaviors:</p>
+<p>Periodic motion</p>
+<p>Quasiperiodic motion</p>
+<p>Chaotic motion</p>
+<p>Analyze the transition to chaos:</p>
+<p>Determine when and how the motion becomes sensitive to initial conditions.</p>
+<p>Describe the role of nonlinearities:</p>
+<p>Especially for large-angle oscillations where 
+sin
+⁡
+(
+𝜃
+)
+sin(θ) cannot be approximated as 
+𝜃
+θ.</p>
+<p>✅ 3. Practical Applications
+Identify and describe real-world systems that follow similar dynamics:</p>
+<p>Energy harvesting mechanisms</p>
+<p>Suspension bridges (e.g., Tacoma Narrows)</p>
+<p>Driven RLC circuits in electronics</p>
+<p>Biomechanical systems (e.g., human gait, heart rhythms)</p>
+<p>Discuss engineering relevance:</p>
+<p>Mechanical resonance</p>
+<p>Vibration isolation</p>
+<p>Design of dampers and oscillators</p>
+<p>Reflect on model limitations:</p>
+<p>No air drag, ideal pivot, constant parameters, perfect periodic forcing.</p>
+<p>✅ 4. Implementation
+Build a computational model (e.g., using Python):</p>
+<p>Implement numerical methods like Runge-Kutta to solve the nonlinear differential equation.</p>
+<p>Simulate pendulum motion under:</p>
+<p>Varying initial conditions</p>
+<p>Different damping, driving force, and frequency values</p>
+<p>Generate the following visualizations:</p>
+<p>Time-series plots of angular displacement</p>
+<p>Phase diagrams (velocity vs. displacement)</p>
+<p>Poincaré sections (for periodic sampling of phase space)</p>
+<p>Bifurcation diagrams (as a function of driving amplitude or frequency)</p>
+<p>Allow for parameter input or sweeping to observe:</p>
+<p>Transitions from order to chaos</p>
+<p>Resonant behavior</p>
+<p>✅ 5. Deliverables
+A complete Markdown document or Jupyter notebook with:</p>
+<p>All equations, derivations, and explanations.</p>
+<p>Annotated Python code.</p>
+<p>Graphs and diagrams described above.</p>
+<p>A written discussion of:</p>
+<p>The system’s behavior under different regimes.</p>
+<p>Comparison of numerical and analytical results.</p>
+<p>Physical interpretation of results.</p>
+<p>Limitations and possible extensions, such as:</p>
+<p>Non-periodic forcing</p>
+<p>Nonlinear or velocity-dependent damping</p>
+<p>Coupled pendulum systems</p>
+<h1 id="theoretical-foundation-forced-damped-pendulum">Theoretical Foundation: Forced Damped Pendulum</h1>
+<p>The dynamics of a <strong>forced damped pendulum</strong> can be captured by a second-order nonlinear differential equation that includes the effects of inertia, damping, restoring force (gravity), and external periodic driving force.</p>
+<h2 id="general-equation-of-motion">General Equation of Motion</h2>
+<p>The standard form of the governing equation is:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + \beta \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = \Gamma \cos(\omega t)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(\theta(t)\)</span> is the angular displacement.</li>
+<li><span class="arithmatex">\(\beta\)</span> is the damping coefficient (frictional resistance).</li>
+<li><span class="arithmatex">\(\omega_0 = \sqrt{\frac{g}{L}}\)</span> is the natural frequency of the undriven, undamped pendulum.</li>
+<li><span class="arithmatex">\(\Gamma\)</span> is the amplitude of the external driving torque.</li>
+<li><span class="arithmatex">\(\omega\)</span> is the angular frequency of the driving force.</li>
+</ul>
+<p>This equation is <strong>nonlinear</strong> due to the <span class="arithmatex">\(\sin(\theta)\)</span> term.</p>
+<hr/>
+<h2 id="linearization-for-small-angle-approximation">Linearization for Small-Angle Approximation</h2>
+<p>For small angular displacements, where <span class="arithmatex">\(\theta \ll 1\)</span> (in radians), we can approximate:</p>
+<div class="arithmatex">\[
+\sin(\theta) \approx \theta
+\]</div>
+<p>Substituting this into the equation yields a linear second-order nonhomogeneous ODE:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + \beta \frac{d\theta}{dt} + \omega_0^2 \theta = \Gamma \cos(\omega t)
+\]</div>
+<p>This linearized form is more tractable analytically and is a classic model for studying resonance and damping in oscillatory systems.</p>
+<hr/>
+<h2 id="analytical-solution-to-the-linearized-equation">Analytical Solution to the Linearized Equation</h2>
+<p>The general solution to the linearized equation is the sum of the <strong>homogeneous solution</strong> and the <strong>particular solution</strong>.</p>
+<h3 id="homogeneous-equation">Homogeneous Equation:</h3>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + \beta \frac{d\theta}{dt} + \omega_0^2 \theta = 0
+\]</div>
+<ul>
+<li>This represents <strong>free damped oscillations</strong>.</li>
+<li>The solution depends on the damping ratio <span class="arithmatex">\(\zeta = \frac{\beta}{2\omega_0}\)</span>.</li>
+<li>Possible cases:</li>
+<li>Underdamped: <span class="arithmatex">\(\zeta &lt; 1\)</span></li>
+<li>Critically damped: <span class="arithmatex">\(\zeta = 1\)</span></li>
+<li>Overdamped: <span class="arithmatex">\(\zeta &gt; 1\)</span></li>
+</ul>
+<h3 id="particular-solution">Particular Solution:</h3>
+<p>For the driving term <span class="arithmatex">\(\Gamma \cos(\omega t)\)</span>, we assume a solution of the form:</p>
+<div class="arithmatex">\[
+\theta_p(t) = A \cos(\omega t - \phi)
+\]</div>
+<p>Substituting into the equation, we find:</p>
+<div class="arithmatex">\[
+A = \frac{\Gamma}{\sqrt{(\omega_0^2 - \omega^2)^2 + \beta^2 \omega^2}}, \quad \tan(\phi) = \frac{\beta \omega}{\omega_0^2 - \omega^2}
+\]</div>
+<hr/>
+<h2 id="resonance">Resonance</h2>
+<p><strong>Resonance</strong> occurs when the amplitude <span class="arithmatex">\(A\)</span> of steady-state oscillation becomes maximal. This happens when the driving frequency <span class="arithmatex">\(\omega\)</span> approaches the system's <strong>resonant frequency</strong>.</p>
+<p>For small damping (<span class="arithmatex">\(\beta \ll 1\)</span>), the resonance condition approximates to:</p>
+<div class="arithmatex">\[
+\omega_{\text{res}} \approx \omega_0
+\]</div>
+<p>At resonance, the system absorbs energy most efficiently from the external force, leading to large amplitude oscillations if not damped.</p>
+<hr/>
+<h2 id="energy-transfer-and-dissipation">Energy Transfer and Dissipation</h2>
+<ul>
+<li><strong>Driving Force</strong>: Injects energy into the system at a rate dependent on <span class="arithmatex">\(\Gamma\)</span> and <span class="arithmatex">\(\omega\)</span>.</li>
+<li><strong>Damping Term</strong> (<span class="arithmatex">\(\beta \frac{d\theta}{dt}\)</span>): Continuously dissipates energy, converting mechanical energy into thermal energy.</li>
+<li>In the <strong>steady-state</strong>, energy input from the driver is balanced by energy loss from damping.</li>
+</ul>
+<p>This interplay governs whether the pendulum settles into a periodic motion, undergoes resonance, or transitions into chaotic behavior when nonlinearity is reintroduced.</p>
+<p>def forced_damped_pendulum(t, y, beta, omega0, Gamma, omega_drive):
+    theta, omega = y
+    dtheta_dt = omega
+    domega_dt = -beta * omega - omega0**2 * np.sin(theta) + Gamma * np.cos(omega_drive * t)
+    return [dtheta_dt, domega_dt]</p>
+<h1 id="simulate-the-pendulum-motion">Simulate the pendulum motion</h1>
+<p>def simulate(theta0, omega0_init, beta, omega0, Gamma, omega_drive, t_max=50, dt=0.01):
+    t_eval = np.arange(0, t_max, dt)
+    sol = solve_ivp(
+        forced_damped_pendulum,
+        [0, t_max],
+        [theta0, omega0_init],
+        t_eval=t_eval,
+        args=(beta, omega0, Gamma, omega_drive),
+        rtol=1e-8,
+        atol=1e-10
+    )
+    return sol.t, sol.y[0], sol.y[1]</p>
+<h1 id="-simulation-parameters-">--- Simulation Parameters ---</h1>
+<p>theta0 = 0.2
+omega0_init = 0.0
+beta = 0.2              # Damping coefficient
+omega0 = 1.5            # Natural frequency
+Gamma = 1.2             # Driving amplitude
+omega_drive = 2/3       # Driving frequency</p>
+<h1 id="-run-simulation-">--- Run Simulation ---</h1>
+<p>t, theta, omega = simulate(theta0, omega0_init, beta, omega0, Gamma, omega_drive)</p>
+<h1 id="-plot-time-series-and-phase-diagram-">--- Plot Time-Series and Phase Diagram ---</h1>
+<p>fig, axs = plt.subplots(1, 2)
+axs[0].plot(t, theta)
+axs[0].set_title("Angular Displacement vs Time")
+axs[0].set_xlabel("Time [s]")
+axs[0].set_ylabel("Theta [rad]")</p>
+<p>axs[1].plot(theta, omega, lw=0.8)
+axs[1].set_title("Phase Diagram")
+axs[1].set_xlabel("Theta [rad]")
+axs[1].set_ylabel("Angular Velocity [rad/s]")</p>
+<p>plt.tight_layout()
+plt.show()</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
