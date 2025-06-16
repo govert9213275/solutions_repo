@@ -403,7 +403,171 @@ axs[1].set_title("Phase Diagram")
 axs[1].set_xlabel("Theta [rad]")
 axs[1].set_ylabel("Angular Velocity [rad/s]")</p>
 <p>plt.tight_layout()
-plt.show()</p>
+plt.show()
+<img alt="alt text" src="../image-2.png"/>
+5. Deliverables
+📘 Full Analytical and Numerical Report
+This document presents a thorough investigation of the forced damped pendulum using both analytical and computational methods. It includes:</p>
+<p>Derivations of governing equations from physical principles.
+Analytical solutions under simplifying assumptions.
+Numerical solutions for general nonlinear behavior.
+Graphical representations of system dynamics.
+🧮 Mathematical Foundation
+The governing nonlinear differential equation for the forced damped pendulum is:</p>
+<p>d
+2
+θ
+d
+t
+2
++
+β
+d
+θ
+d
+t
++
+ω
+0
+2
+sin
+⁡
+(
+θ
+)
+=
+Γ
+cos
+⁡
+(
+ω
+t
+)
+dt 
+2</p>
+<p>d 
+2
+ θ
+​
+ +β 
+dt
+dθ
+​
+ +ω 
+0
+2
+​
+ sin(θ)=Γcos(ωt)</p>
+<p>For small angular displacements:</p>
+<p>sin
+⁡
+(
+θ
+)
+≈
+θ
+sin(θ)≈θ</p>
+<p>The linearized equation becomes:</p>
+<p>d
+2
+θ
+d
+t
+2
++
+β
+d
+θ
+d
+t
++
+ω
+0
+2
+θ
+=
+Γ
+cos
+⁡
+(
+ω
+t
+)
+dt 
+2</p>
+<p>d 
+2
+ θ
+​
+ +β 
+dt
+dθ
+​
+ +ω 
+0
+2
+​
+ θ=Γcos(ωt)</p>
+<p>🧑‍💻 Annotated Python Code
+Code sections simulate:</p>
+<p>Time evolution of angular displacement.
+Phase portraits.
+Poincaré sections.
+Bifurcation diagrams.
+📈 Graphs and Visualizations
+We include:</p>
+<p>Time-series plots for 
+θ
+(
+t
+)
+θ(t)
+Phase diagrams for 
+(
+θ
+,
+θ
+˙
+)
+(θ, 
+θ
+˙
+ )
+Poincaré sections showing periodic structure
+Bifurcation diagrams vs 
+Γ
+Γ or 
+ω
+ω
+🧠 System Behavior Discussion
+Key dynamical regimes:</p>
+<p>Periodic Motion (low driving)
+Resonance (
+ω
+≈
+ω
+0
+ω≈ω 
+0
+​
+ )
+Chaos (high 
+Γ
+Γ)
+🧾 Comparison: Numerical vs Analytical
+For small angles and low forcing, numerical simulations match analytical solutions. Nonlinear behavior emerges under strong forcing and low damping.</p>
+<p>🌍 Physical Interpretation
+Applications:</p>
+<p>Engineering: Suspension systems, MEMS
+Climate: Quasiperiodic systems
+Electronics: RLC circuits
+🚧 Limitations &amp; Extensions
+Assumes sinusoidal forcing, constant damping.</p>
+<p>Future work may explore:</p>
+<p>Random forcing
+Nonlinear damping
+Coupled pendula
+Double pendulum models</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
