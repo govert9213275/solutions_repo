@@ -172,6 +172,200 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="estimating-pi-using-monte-carlo-methods">Estimating <span class="arithmatex">\(\pi\)</span> Using Monte Carlo Methods</h1>
+<hr/>
+<h2 id="1-theoretical-foundation">✅ 1. Theoretical Foundation</h2>
+<h3 id="geometric-probability-concept">Geometric Probability Concept</h3>
+<p>Monte Carlo estimation of <span class="arithmatex">\(\pi\)</span> relies on <strong>geometric probability</strong>: randomly sampling points in a known area and using their distribution to estimate an unknown value.</p>
+<p>We consider a <strong>unit circle</strong> (radius <span class="arithmatex">\(r = 1\)</span>) centered at the origin, inscribed in a square of side length 2. That square spans from <span class="arithmatex">\(x = -1\)</span> to <span class="arithmatex">\(x = 1\)</span> and <span class="arithmatex">\(y = -1\)</span> to <span class="arithmatex">\(y = 1\)</span>.</p>
+<h3 id="area-calculations">Area Calculations</h3>
+<ul>
+<li>Area of unit circle:</li>
+</ul>
+<div class="arithmatex">\[
+A_{\text{circle}} = \pi r^2 = \pi
+\]</div>
+<ul>
+<li>Area of bounding square:</li>
+</ul>
+<div class="arithmatex">\[
+A_{\text{square}} = (2)^2 = 4
+\]</div>
+<h3 id="probability-interpretation">Probability Interpretation</h3>
+<p>If we generate a large number of random points uniformly within the square, the <strong>probability</strong> that a point lies inside the circle is:</p>
+<div class="arithmatex">\[
+P(\text{point inside circle}) = \frac{A_{\text{circle}}}{A_{\text{square}}} = \frac{\pi}{4}
+\]</div>
+<h3 id="estimating-pi">Estimating <span class="arithmatex">\(\pi\)</span></h3>
+<p>Rearranging the above gives an estimator for <span class="arithmatex">\(\pi\)</span>:</p>
+<div class="arithmatex">\[
+\pi \approx 4 \times \frac{\text{Points inside circle}}{\text{Total number of points}}
+\]</div>
+<hr/>
+<h2 id="2-simulation">✅ 2. Simulation</h2>
+<p>To simulate the estimation:</p>
+<ul>
+<li>Generate <span class="arithmatex">\(N\)</span> random points <span class="arithmatex">\((x_i, y_i)\)</span> where:</li>
+</ul>
+<div class="arithmatex">\[
+x_i, y_i \in [-1, 1]
+\]</div>
+<ul>
+<li>Count the number of points that fall <strong>inside the circle</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+x_i^2 + y_i^2 \leq 1
+\]</div>
+<ul>
+<li>Estimate <span class="arithmatex">\(\pi\)</span> as:</li>
+</ul>
+<div class="arithmatex">\[
+\pi \approx 4 \cdot \frac{N_{\text{inside}}}{N_{\text{total}}}
+\]</div>
+<hr/>
+<h2 id="3-visualization">✅ 3. Visualization</h2>
+<p>To enhance interpretation:</p>
+<ul>
+<li>Plot all the randomly generated points.</li>
+<li><strong>Use blue</strong> for points <strong>inside the circle</strong>.</li>
+<li><strong>Use red</strong> for points <strong>outside the circle</strong>.</li>
+<li>Overlay the unit circle for reference.</li>
+</ul>
+<p>Optional: Add annotations for:
+- The current estimated value of <span class="arithmatex">\(\pi\)</span>
+- The total number of iterations</p>
+<hr/>
+<blockquote>
+<p><strong>Note:</strong> This method showcases how randomness can be used for deterministic estimation and is a classic example in <strong>numerical computation, probability theory</strong>, and <strong>statistical physics</strong>.
+<img alt="alt text" src="../image-8.png"/></p>
+</blockquote>
+<h1 id="analysis-of-monte-carlo-estimation-of">Analysis of Monte Carlo Estimation of π</h1>
+<h2 id="convergence-of-the-estimate">Convergence of the Estimate</h2>
+<p>The Monte Carlo method estimates π by sampling random points and using the ratio of points inside the unit circle to the total number of points:</p>
+<div class="arithmatex">\[
+\hat{\pi}_N = 4 \times \frac{N_{\text{inside}}}{N}
+\]</div>
+<p>where</p>
+<ul>
+<li><span class="arithmatex">\(N\)</span> is the total number of sampled points,</li>
+<li><span class="arithmatex">\(N_{\text{inside}}\)</span> is the number of points inside the unit circle.</li>
+</ul>
+<p>As <span class="arithmatex">\(N \to \infty\)</span>, by the Law of Large Numbers, the estimate <span class="arithmatex">\(\hat{\pi}_N\)</span> converges to the true value <span class="arithmatex">\(\pi\)</span>:</p>
+<div class="arithmatex">\[
+\lim_{N \to \infty} \hat{\pi}_N = \pi
+\]</div>
+<h2 id="error-and-convergence-rate">Error and Convergence Rate</h2>
+<p>The standard deviation (uncertainty) in the estimate decreases with the number of points sampled. Since this is a Bernoulli trial with success probability <span class="arithmatex">\(p = \pi/4\)</span>, the variance of the estimate is:</p>
+<div class="arithmatex">\[
+\text{Var}(\hat{\pi}_N) = 16 \times \frac{p(1-p)}{N}
+\]</div>
+<p>and thus the standard error scales as:</p>
+<div class="arithmatex">\[
+\text{SE}(\hat{\pi}_N) = 4 \sqrt{\frac{p(1-p)}{N}} \sim \frac{C}{\sqrt{N}}
+\]</div>
+<p>where <span class="arithmatex">\(C\)</span> is a constant depending on <span class="arithmatex">\(p\)</span>. This means the convergence is proportional to <span class="arithmatex">\(1/\sqrt{N}\)</span> — <strong>slow but steady</strong>.</p>
+<h2 id="computational-cost">Computational Cost</h2>
+<ul>
+<li>The computational time scales linearly with <span class="arithmatex">\(N\)</span> because each point requires one evaluation to check if it lies inside the circle.</li>
+<li>For very large <span class="arithmatex">\(N\)</span>, the method becomes computationally expensive but can be easily parallelized since each point's evaluation is independent.</li>
+<li>Visualization and memory may become bottlenecks at very large <span class="arithmatex">\(N\)</span>.</li>
+</ul>
+<hr/>
+<p>Discussion Points
+The plot shows that as the number of points <span class="arithmatex">\(N\)</span> increases, the estimate <span class="arithmatex">\(\hat{\pi}_N\)</span> oscillates around the true value <span class="arithmatex">\(\pi\)</span> but converges closer with larger <span class="arithmatex">\(N\)</span>.</p>
+<p>The <span class="arithmatex">\(1/\sqrt{N}\)</span> convergence rate means to improve accuracy by a factor of 10, you need 100 times more points.</p>
+<p>The Monte Carlo method is simple and flexible but may not be the most computationally efficient method for extremely precise estimates.</p>
+<p>Parallel computing or variance reduction techniques (e.g., stratified sampling) can improve efficiency.</p>
+<h1 id="part-2-estimating-using-buffons-needle">Part 2: Estimating π Using Buffon's Needle</h1>
+<h2 id="1-theoretical-foundation_1">1. Theoretical Foundation</h2>
+<p>Buffon's Needle problem is a classical example of geometric probability, where a needle of length <span class="arithmatex">\(\ell\)</span> is dropped onto a plane with parallel lines spaced <span class="arithmatex">\(d\)</span> units apart (<span class="arithmatex">\(d &gt; \ell\)</span>). The objective is to estimate <span class="arithmatex">\(\pi\)</span> based on the probability that the needle crosses one of these lines.</p>
+<hr/>
+<h3 id="problem-setup">Problem Setup:</h3>
+<ul>
+<li>Parallel lines are spaced at distance <span class="arithmatex">\(d\)</span>.</li>
+<li>Needle length is <span class="arithmatex">\(\ell\)</span>.</li>
+<li>The needle is dropped randomly on the surface such that:</li>
+<li>The center of the needle lies at a uniform random distance from the nearest line, say <span class="arithmatex">\(x \in [0, \frac{d}{2}]\)</span>.</li>
+<li>The angle <span class="arithmatex">\(\theta\)</span> between the needle and the lines is uniformly distributed in <span class="arithmatex">\([0, \pi/2]\)</span> due to symmetry.</li>
+</ul>
+<hr/>
+<h3 id="probability-of-crossing-a-line">Probability of Crossing a Line</h3>
+<p>The needle crosses a line if the projection of half its length onto the axis perpendicular to the lines is greater than the distance from the center to the nearest line:</p>
+<div class="arithmatex">\[
+x \leq \frac{\ell}{2} \sin \theta
+\]</div>
+<p>By integrating over all possible <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(\theta\)</span>, the probability <span class="arithmatex">\(P\)</span> that the needle crosses a line is given by:</p>
+<div class="arithmatex">\[
+P = \frac{2 \ell}{\pi d}
+\]</div>
+<hr/>
+<h3 id="estimation-of">Estimation of π</h3>
+<p>Given:</p>
+<ul>
+<li><span class="arithmatex">\(N\)</span>: total number of needle drops</li>
+<li><span class="arithmatex">\(C\)</span>: number of times the needle crosses a line</li>
+</ul>
+<p>The probability <span class="arithmatex">\(P\)</span> can be approximated by:</p>
+<div class="arithmatex">\[
+P \approx \frac{C}{N}
+\]</div>
+<p>Rearranging to estimate <span class="arithmatex">\(\pi\)</span> yields:</p>
+<div class="arithmatex">\[
+\boxed{
+\pi \approx \frac{2 \ell N}{d C}
+}
+\]</div>
+<p>This formula forms the basis for estimating <span class="arithmatex">\(\pi\)</span> via the Buffon's Needle experiment.</p>
+<hr/>
+<h2 id="2-simulation_1">2. Simulation</h2>
+<p>To simulate this experiment:</p>
+<ol>
+<li>
+<p>Generate <span class="arithmatex">\(N\)</span> needle drops.</p>
+</li>
+<li>
+<p>For each drop:</p>
+</li>
+<li>Randomly choose the center position <span class="arithmatex">\(x\)</span> uniformly in <span class="arithmatex">\([0, \frac{d}{2}]\)</span>.</li>
+<li>
+<p>Randomly choose the needle angle <span class="arithmatex">\(\theta\)</span> uniformly in <span class="arithmatex">\([0, \pi/2]\)</span>.</p>
+</li>
+<li>
+<p>Determine if the needle crosses a line by checking:</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+x \leq \frac{\ell}{2} \sin \theta
+\]</div>
+<ol>
+<li>
+<p>Count the total number of crosses <span class="arithmatex">\(C\)</span>.</p>
+</li>
+<li>
+<p>Estimate <span class="arithmatex">\(\pi\)</span> using:</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+\pi \approx \frac{2 \ell N}{d C}
+\]</div>
+<hr/>
+<h2 id="3-visualization_1">3. Visualization</h2>
+<p>Create a visual diagram including:</p>
+<ul>
+<li>Parallel lines spaced by distance <span class="arithmatex">\(d\)</span>.</li>
+<li>Depicted needles:</li>
+<li>Needles crossing a line marked in one color (e.g., red).</li>
+<li>Needles not crossing a line marked in a different color (e.g., blue).</li>
+</ul>
+<p>Such a visualization aids understanding of the geometric probability underpinning Buffon's Needle problem.</p>
+<hr/>
+<p><img alt="alt text" src="../image-9.png"/>
+How this works:
+Randomly drops <span class="arithmatex">\(N\)</span> needles with random center positions and angles.</p>
+<p>Checks which needles cross any of the parallel lines spaced by <span class="arithmatex">\(d\)</span>.</p>
+<p>Uses the Buffon formula to estimate <span class="arithmatex">\(\pi\)</span>.</p>
+<p>Visualizes the needles: red for crossing, blue otherwise.</p>
+<p>Shows parallel lines spaced by <span class="arithmatex">\(d\)</span>.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
