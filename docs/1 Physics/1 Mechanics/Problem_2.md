@@ -324,3 +324,183 @@ axs[1].set_ylabel("Angular Velocity [rad/s]")
 
 plt.tight_layout()
 plt.show()
+![alt text](image-2.png)
+5. Deliverables
+📘 Full Analytical and Numerical Report
+This document presents a thorough investigation of the forced damped pendulum using both analytical and computational methods. It includes:
+
+Derivations of governing equations from physical principles.
+Analytical solutions under simplifying assumptions.
+Numerical solutions for general nonlinear behavior.
+Graphical representations of system dynamics.
+🧮 Mathematical Foundation
+The governing nonlinear differential equation for the forced damped pendulum is:
+
+d
+2
+θ
+d
+t
+2
++
+β
+d
+θ
+d
+t
++
+ω
+0
+2
+sin
+⁡
+(
+θ
+)
+=
+Γ
+cos
+⁡
+(
+ω
+t
+)
+dt 
+2
+ 
+d 
+2
+ θ
+​
+ +β 
+dt
+dθ
+​
+ +ω 
+0
+2
+​
+ sin(θ)=Γcos(ωt)
+
+For small angular displacements:
+
+sin
+⁡
+(
+θ
+)
+≈
+θ
+sin(θ)≈θ
+
+The linearized equation becomes:
+
+d
+2
+θ
+d
+t
+2
++
+β
+d
+θ
+d
+t
++
+ω
+0
+2
+θ
+=
+Γ
+cos
+⁡
+(
+ω
+t
+)
+dt 
+2
+ 
+d 
+2
+ θ
+​
+ +β 
+dt
+dθ
+​
+ +ω 
+0
+2
+​
+ θ=Γcos(ωt)
+
+🧑‍💻 Annotated Python Code
+Code sections simulate:
+
+Time evolution of angular displacement.
+Phase portraits.
+Poincaré sections.
+Bifurcation diagrams.
+📈 Graphs and Visualizations
+We include:
+
+Time-series plots for 
+θ
+(
+t
+)
+θ(t)
+Phase diagrams for 
+(
+θ
+,
+θ
+˙
+)
+(θ, 
+θ
+˙
+ )
+Poincaré sections showing periodic structure
+Bifurcation diagrams vs 
+Γ
+Γ or 
+ω
+ω
+🧠 System Behavior Discussion
+Key dynamical regimes:
+
+Periodic Motion (low driving)
+Resonance (
+ω
+≈
+ω
+0
+ω≈ω 
+0
+​
+ )
+Chaos (high 
+Γ
+Γ)
+🧾 Comparison: Numerical vs Analytical
+For small angles and low forcing, numerical simulations match analytical solutions. Nonlinear behavior emerges under strong forcing and low damping.
+
+🌍 Physical Interpretation
+Applications:
+
+Engineering: Suspension systems, MEMS
+Climate: Quasiperiodic systems
+Electronics: RLC circuits
+🚧 Limitations & Extensions
+Assumes sinusoidal forcing, constant damping.
+
+Future work may explore:
+
+Random forcing
+Nonlinear damping
+Coupled pendula
+Double pendulum models
